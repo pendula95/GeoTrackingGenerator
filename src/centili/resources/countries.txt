@@ -105,7 +105,6 @@ uy    ,    Uruguay
 uz    ,    Uzbekistan
 ve    ,    Venezuela
 vn    ,    Vietnam
-xk    ,    Kosovo
 xt    ,    Transnistria
 ye    ,    Yemen
 za    ,    South Africa

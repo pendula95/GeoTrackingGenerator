@@ -1,13 +1,15 @@
 package centili;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        if(args.length < 2) {
+        if (args.length < 2) {
             System.out.println("Bad command line arguments. Please provide url to target as first argument and number of requests per minute for second argument.");
             return;
         }
@@ -19,8 +21,8 @@ public class Main {
 
 class FileParser {
 
-    String line;
-    List<String> countryNameInfo = new ArrayList<>();
+    private String line;
+    private List<String> countryNameInfo = new ArrayList<>();
 
     public FileParser() {
 

@@ -1,7 +1,6 @@
 package centili;
 
 import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.JsonAdapter;
 
 import java.util.List;
 import java.util.Random;

@@ -11,12 +11,11 @@ import org.apache.http.impl.client.HttpClients;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Created by lbulic on 3/25/17.
  */
-public class HttpClientGEO extends Thread{
+public class HttpClientGEO extends Thread {
 
     private HttpClient httpClient;
     private HttpPost postRequest;
@@ -36,7 +35,7 @@ public class HttpClientGEO extends Thread{
     }
 
     public void run() {
-        while(true) {
+        while (true) {
             try {
                 String json = gson.toJson(generateRandomTransfer());
                 StringEntity requestEntity = new StringEntity(
@@ -45,7 +44,7 @@ public class HttpClientGEO extends Thread{
                 postRequest.setEntity(requestEntity);
                 HttpResponse rawResponse = httpClient.execute(postRequest);
                 System.out.println("Request sent = " + postRequest + " data = " + json);
-                System.out.println("Response = "  +  rawResponse + "\n");
+                System.out.println("Response = " + rawResponse + "\n");
                 rawResponse.getEntity().getContent().close();
 
                 sleep(numberOfRequestsPerMinute);
